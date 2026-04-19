@@ -288,7 +288,7 @@ def build_manifesto():
             "§ 03 Contribute",
             "Stories, photos, legal research, DIY guides, maps, art, manifestos. The open repository at github.com/FreeToBuild is the hub. There is no gatekeeper. Pull requests welcome.",
             "§ 04 Fund the fight",
-            "Direct giving, fiscal hosts, grants, stipends — see freetobuild.github.io/fund. Every euro funds research, builders on the ground, and the legal work to defend them.",
+            "Direct giving, fiscal hosts, grants, stipends — see freetobuild.github.io/fund. Every cent funds research, builders on the ground, and the legal work to defend them.",
             "§ 05 Don't wait for permission",
             "That was always the point.",
         ],
@@ -384,7 +384,7 @@ def build_press_kit():
     y -= 16 * mm
 
     paragraphs = [
-        "For the first time in human history, a single person with a few thousand euros can build a home, power it, feed a family, stay connected, and live far from any city — comfortably, legally, and indefinitely.",
+        "For the first time in human history, a single person on a modest budget can build a home, power it, feed a family, stay connected, and live far from any city — comfortably, legally, and indefinitely.",
         "The only remaining obstacle between a human being and a self-built, self-owned, off-grid home is the legal fiction that they need someone's permission. That is the single lever this movement pulls.",
     ]
     max_w = W - 2 * MARGIN
@@ -397,8 +397,8 @@ def build_press_kit():
     stats = [
         ("~90%", "fall in solar PV price per watt, 2014–2024"),
         ("~50%", "fall in LFP battery cost, 2021–2024"),
-        ("< €50/mo", "LEO satellite internet, anywhere on the continent"),
-        ("< €15k", "material cost for a warm, 40 m² timber cabin"),
+        ("Cheap/mo", "LEO satellite internet, anywhere on the continent"),
+        ("Low 5-figures", "material cost for a warm, 40 m² timber cabin"),
     ]
     box_w = (max_w - 3 * 6 * mm) / 4
     box_h = 30 * mm
@@ -566,7 +566,7 @@ def build_press_kit():
 
     lines = [
         ("COVER IT", "Press inquiries: press@freetobuild.org. We reply fast."),
-        ("FUND IT", "GitHub Sponsors, Liberapay, Ko-fi, Open Collective Europe, SEPA, crypto."),
+        ("FUND IT", "GitHub Sponsors, Liberapay, Ko-fi, Open Collective, SEPA, crypto."),
         ("GRANT IT", "NLnet, Sovereign Tech Fund, Shuttleworth, Open Society, Emergent Ventures, Prototype Fund, Mozilla."),
         ("BUILD IT", "Find unclaimed land. Put down stakes. Document everything in public."),
         ("SHARE IT", "Post with #FreeToBuild. Print this page. Put it on a wall."),

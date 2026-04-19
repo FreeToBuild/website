@@ -27,13 +27,16 @@
     </span>
     <span class="brand-text">FREE<span class="brand-to">TO</span>BUILD</span>
   </a>
-  <nav class="nav-links" aria-label="Primary">
-    <a href="fund.html">Fund</a>
+  <nav class="nav-links" id="nav-links" aria-label="Primary">
+    <a href="claim.html">Claim</a>
+    <a href="manifesto.html">Manifesto</a>
     <a href="research.html">Research</a>
-    <a href="land.html">Land</a>
-    <a href="press.html">Press</a>
+    <a href="fund.html">Fund</a>
   </nav>
-  <a class="btn btn-ghost nav-cta" href="index.html#act">Join</a>
+  <a class="btn btn-primary nav-cta" href="index.html#act">Act</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <main id="top">
@@ -48,7 +51,7 @@
       <span class="page-eyebrow">Research &amp; Documentation</span>
       <h1 class="page-title">Technology is <span class="accent">setting us free.</span></h1>
       <p class="page-sub">
-        For the first time in human history, a single person with a few thousand euros can build a home, power it, feed a family, stay connected, and live far from any city — comfortably, legally, and indefinitely. We document why.
+        For the first time in human history, a single person on a modest budget can build a home, power it, feed a family, stay connected, and live far from any city — comfortably, legally, and indefinitely. We document why.
       </p>
     </div>
   </section>
@@ -62,7 +65,7 @@
       </div>
 
       <h3>01 &middot; Energy is no longer a bottleneck</h3>
-      <p>A 2kW solar array with a modern LFP battery now costs under €2,500 and can reliably power a small home, fridge, internet, lights, tools, and electric heat for most of the year. Panel prices fell <strong>~90% in the last decade</strong>. LFP battery prices fell another <strong>~50% in the last three years</strong>.</p>
+      <p>A 2kW solar array with a modern LFP battery now costs a few thousand and can reliably power a small home, fridge, internet, lights, tools, and electric heat for most of the year. Panel prices fell <strong>~90% in the last decade</strong>. LFP battery prices fell another <strong>~50% in the last three years</strong>.</p>
       <p>This is the single biggest shift. It means you do not need a grid connection — or anyone's permission to get one — to live a dignified modern life.</p>
       <ul>
         <li><strong>Primary sources:</strong> IEA <em>Renewables</em> reports, NREL cost benchmarks, BloombergNEF battery price survey.</li>
@@ -80,10 +83,10 @@
       <h3>03 &middot; Shelter is cheap and fast</h3>
       <p>We are no longer limited to cinder blocks and petroleum roofing.</p>
       <ul>
-        <li><strong>Timber frame + SIPs:</strong> a warm, code-grade 40 m² cabin for €8–15k of materials.</li>
+        <li><strong>Timber frame + SIPs:</strong> a warm, code-grade 40 m² cabin for a low five-figure material bill.</li>
         <li><strong>CEB (compressed earth block)</strong> and <strong>hempcrete</strong>: local, carbon-negative, fire-resistant.</li>
         <li><strong>Earthbag</strong> and <strong>earthships</strong>: documented, survived earthquakes, dirt-cheap.</li>
-        <li><strong>3D-printed concrete</strong>: €5k printers now ship from China; a shell can be printed in 24–48 h.</li>
+        <li><strong>3D-printed concrete</strong>: low-cost printers now ship from China; a shell can be printed in 24–48 h.</li>
         <li><strong>Tiny-house &amp; yurt industries</strong>: turnkey, road-legal, 2-week delivery.</li>
       </ul>
 
@@ -95,7 +98,7 @@
       </ul>
 
       <h3>05 &middot; Connectivity is global</h3>
-      <p>Low-earth-orbit satellite internet (Starlink and competitors) means gigabit-class connectivity anywhere on the continent — no ISP, no cables, no landlord, no paperwork. Kit + dish &lt; €400, monthly &lt; €50. This is the quiet revolution. You can now earn a remote-work salary from a forest in the Scandinavian interior.</p>
+      <p>Low-earth-orbit satellite internet (Starlink and competitors) means gigabit-class connectivity anywhere on the continent — no ISP, no cables, no landlord, no paperwork. The hardware is a few hundred up front, the subscription cheaper than most urban broadband. This is the quiet revolution. You can now earn a remote-work salary from a forest in the Scandinavian interior.</p>
 
       <h3>06 &middot; Sanitation without sewers</h3>
       <p>Modern composting and incinerating toilets are odorless, code-compliant in many countries, and eliminate the single biggest reason historical settlements needed dense infrastructure. Greywater systems (wetlands, mulch basins) close the loop without permits in most non-EU jurisdictions.</p>
@@ -104,13 +107,13 @@
       <p>Rocket mass heaters burn a handful of dry twigs and radiate warmth for a day. Air-source heat pumps work efficiently to &minus;20&deg;C. Earth-sheltered design gives free climate control. Insulation materials (sheep wool, cellulose, hempcrete) are cheap, non-toxic, and carbon-negative.</p>
 
       <h3>08 &middot; Tools are cheap, portable, universal</h3>
-      <p>A 1kWh battery pack now runs a circular saw, drill, impact driver, chainsaw, angle grinder, planer, and mitre saw for a full day. Ten years ago this required a generator and €5,000 of gear. Today: a single €800 Ecoflow-class power station and €1,500 of tools.</p>
+      <p>A 1kWh battery pack now runs a circular saw, drill, impact driver, chainsaw, angle grinder, planer, and mitre saw for a full day. Ten years ago this required a generator and thousands of dollars of gear. Today: a single Ecoflow-class power station and a modest tool kit do the job.</p>
 
       <h3>09 &middot; Manufacturing at home</h3>
       <p>3D printing (FDM &amp; resin), open-source CNC mills, low-cost welders, and pocket laser cutters mean parts, fixtures, fittings, and repairs are produced on-site. Combined with free CAD (FreeCAD, Fusion free tier), an off-grid home is now a small factory.</p>
 
       <h3>10 &middot; Medicine and safety</h3>
-      <p>Telemedicine reaches anywhere Starlink does. A €500 home kit (AED, pulse oximeter, basic labs, trauma pack) plus a trained adult covers 90% of real emergencies in the first hour. Helicopter evac in Europe averages &lt;45 min in most regions.</p>
+      <p>Telemedicine reaches anywhere Starlink does. A small home kit (AED, pulse oximeter, basic labs, trauma pack) plus a trained adult covers 90% of real emergencies in the first hour. Helicopter evac in most of Europe averages under 45 minutes.</p>
 
       <h3>11 &middot; Mapping, records, and trust</h3>
       <p>Open-source satellite imagery (Sentinel, Landsat), community cadastral overlays, and cryptographic timestamping mean an individual can prove occupation, improvement, and the date of a claim without relying on a government register. This is the foundation of our future open land registry.</p>
@@ -156,6 +159,14 @@
       <span class="brand-text">FREE<span class="brand-to">TO</span>BUILD</span>
       <p>Build where you stand. No one's permission required.</p>
     </div>
+    <nav class="footer-links" aria-label="More">
+      <a href="manifesto.html">Manifesto</a>
+      <a href="claim.html">Claim</a>
+      <a href="research.html">Research</a>
+      <a href="fund.html">Fund</a>
+      <a href="press.html">Press &amp; Logos</a>
+      <a href="https://github.com/FreeToBuild" target="_blank" rel="noopener">GitHub</a>
+    </nav>
     <div class="footer-meta">
       <p>Released under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>. No rights reserved. Copy it. Fork it. Make it yours.</p>
       <p class="hash">#FreeToBuild</p>

@@ -11,6 +11,26 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Mobile menu toggle
+  const toggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (toggle && navLinks) {
+    const close = () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    };
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) close();
+    });
+  }
+
   // Reveal on scroll
   const reveals = document.querySelectorAll(
     '.section-title, .lead, .stripe-list, .cards, .principles, .steps, .mega-quote, .final-title, .final-sub, .social-row, .share'
