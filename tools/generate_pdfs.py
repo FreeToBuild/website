@@ -146,7 +146,7 @@ def page_footer(c, page_num, total, mode="dark"):
         c.setFillColor(FG_DIM)
     else:
         c.setFillColor(HexColor("#666666"))
-    c.drawString(MARGIN, 14 * mm, "FREE TO BUILD  ·  freetobuild.github.io  ·  CC0")
+    c.drawString(MARGIN, 14 * mm, "FREE TO BUILD  ·  freeto.build  ·  CC0")
     c.drawRightString(W - MARGIN, 14 * mm, f"{page_num} / {total}")
 
 
@@ -288,7 +288,7 @@ def build_manifesto():
             "§ 03 Contribute",
             "Stories, photos, legal research, DIY guides, maps, art, manifestos. The open repository at github.com/FreeToBuild is the hub. There is no gatekeeper. Pull requests welcome.",
             "§ 04 Fund the fight",
-            "Direct giving, fiscal hosts, grants, stipends — see freetobuild.github.io/fund. Every cent funds research, builders on the ground, and the legal work to defend them.",
+            "Direct giving, fiscal hosts, grants, stipends — see freeto.build/fund. Every cent funds research, builders on the ground, and the legal work to defend them.",
             "§ 05 Don't wait for permission",
             "That was always the point.",
         ],
@@ -312,7 +312,7 @@ def build_manifesto():
     c.setFont("Helvetica", 10)
     c.setFillColor(FG_DIM)
     c.drawCentredString(W / 2, 46 * mm, "Free to Build · est. 2026 · released under CC0 1.0")
-    c.drawCentredString(W / 2, 40 * mm, "freetobuild.github.io  ·  github.com/FreeToBuild")
+    c.drawCentredString(W / 2, 40 * mm, "freeto.build  ·  github.com/FreeToBuild")
     hash_badge(c, W / 2, 28 * mm, size=12)
 
     page_footer(c, 6, TOTAL, mode="dark")
@@ -366,7 +366,7 @@ def build_press_kit():
     c.drawCentredString(W / 2, H / 2 - 36 * mm, "A one-document briefing for press, policy, and funders.")
 
     c.setFont("Helvetica", 10)
-    c.drawCentredString(W / 2, 40 * mm, "freetobuild.github.io  ·  github.com/FreeToBuild")
+    c.drawCentredString(W / 2, 40 * mm, "freeto.build  ·  github.com/FreeToBuild")
     c.drawCentredString(W / 2, 34 * mm, "Released under CC0 1.0 — no rights reserved.")
     hash_badge(c, W / 2, 20 * mm, size=10)
     c.showPage()
@@ -565,7 +565,7 @@ def build_press_kit():
     y -= 18 * mm
 
     lines = [
-        ("COVER IT", "Press inquiries: press@freetobuild.org. We reply fast."),
+        ("COVER IT", "Press inquiries: freetobuildmovement@gmail.com. We reply fast."),
         ("FUND IT", "GitHub Sponsors, Liberapay, Ko-fi, Open Collective, SEPA, crypto."),
         ("GRANT IT", "NLnet, Sovereign Tech Fund, Shuttleworth, Open Society, Emergent Ventures, Prototype Fund, Mozilla."),
         ("BUILD IT", "Find unclaimed land. Put down stakes. Document everything in public."),
@@ -583,7 +583,7 @@ def build_press_kit():
 
     c.setFont("Helvetica", 10)
     c.setFillColor(FG_DIM)
-    c.drawCentredString(W / 2, 30 * mm, "freetobuild.github.io  ·  github.com/FreeToBuild  ·  CC0 1.0")
+    c.drawCentredString(W / 2, 30 * mm, "freeto.build  ·  github.com/FreeToBuild  ·  CC0 1.0")
     hash_badge(c, W / 2, 20 * mm, size=11)
 
     page_footer(c, 6, TOTAL, mode="dark")

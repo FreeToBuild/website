@@ -19,7 +19,7 @@ We're a builder-focused, open-research movement. The most relevant funders are o
 
 ## Suggest a funder
 
-Know of a grant, stipend, foundation, or fellowship we should apply to? Open an issue on the [GitHub repo](https://github.com/FreeToBuild) with the tag `funding` or email <fund@freetobuild.org>. Anyone can submit a lead — we triage weekly and thank every suggestion in the repo.
+Know of a grant, stipend, foundation, or fellowship we should apply to? Open an issue on the [GitHub repo](https://github.com/FreeToBuild) with the tag `funding` or email <freetobuildmovement@gmail.com>. Anyone can submit a lead — we triage weekly and thank every suggestion in the repo.
 
 ---
 
