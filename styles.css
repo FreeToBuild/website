@@ -1360,3 +1360,109 @@ a.signal-card.platform-nostr:hover { border-color: #a37bff; background: rgba(140
   font-style: italic;
   line-height: 1.5;
 }
+/* ---- Bitcoin / Lightning donation cards ---- */
+.btc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 20px 0 28px;
+}
+@media (min-width: 720px) {
+  .btc-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+}
+.btc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: var(--bg-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px -20px rgba(0, 0, 0, 0.5);
+  transition: border-color .25s var(--ease), transform .25s var(--ease);
+}
+.btc-card:hover { border-color: var(--accent); }
+.btc-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.btc-head h4 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0;
+  line-height: 1.1;
+}
+.btc-sub {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+}
+.btc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: #F7931A;
+  color: #fff;
+  flex: 0 0 auto;
+}
+.btc-icon-ln {
+  background: #FFB703;
+  color: #0A0A0A;
+}
+.qr {
+  align-self: center;
+  padding: 12px;
+  background: #F5F2EA;
+  border-radius: var(--radius);
+  line-height: 0;
+}
+.qr canvas { display: block; max-width: 100%; height: auto; }
+.btc-addr {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.btc-addr code {
+  flex: 1;
+  padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: var(--fg);
+  word-break: break-all;
+  background: transparent;
+  min-width: 0;
+  align-self: center;
+}
+.btn-copy {
+  flex: 0 0 auto;
+  padding: 0 16px;
+  background: var(--accent);
+  color: #0A0A0A;
+  border: 0;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s var(--ease);
+}
+.btn-copy:hover { background: var(--accent-2); }
+.btn-copy.is-copied { background: #4ade80; }
+.btc-card .give-cta {
+  align-self: flex-start;
+}
+.btc-note {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 26px;
+}

@@ -60,8 +60,51 @@
     <div class="prose">
       <div class="callout">
         <p class="kicker">TL;DR</p>
-        <p>Direct support works today: <strong>GitHub Sponsors</strong>, <strong>Liberapay</strong>, <strong>Ko-fi</strong>, <strong>Open Collective</strong>, crypto, and SEPA bank transfer. Links go live as each rail is verified — if one is missing, it's coming.</p>
+        <p>Fastest, cheapest, most permissionless: <a href="#bitcoin"><strong>Bitcoin</strong></a> and <a href="#bitcoin"><strong>Lightning</strong></a> — addresses live, QR codes below. Also accepted: <strong>GitHub Sponsors</strong>, <strong>Liberapay</strong>, <strong>Ko-fi</strong>, <strong>Open Collective</strong>, and SEPA bank transfer. Links go live as each rail is verified — if one is missing, it's coming.</p>
       </div>
+
+      <h3 id="bitcoin">Bitcoin &amp; Lightning</h3>
+      <p>No gatekeepers. No country restrictions. No reversals. Scan, paste, send. Every sat goes to research, legal work, documentation, and builders on the ground.</p>
+
+      <div class="btc-grid">
+        <div class="btc-card">
+          <div class="btc-head">
+            <span class="btc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M23.64 14.9c-1.6 6.4-8 10.3-14.4 8.7S-1 16 .6 9.6 9 0 15.4 1.6s9.8 6.9 8.2 13.3zM17.3 10.2c.2-1.6-1-2.5-2.6-3L15 5.2l-1.2-.3-.4 2-1-.2.5-2-1.3-.3-.5 2-.7-.2L8.7 6l.3 1.3s1-.2.9-.2.5.2.6.5l-1 4.4a.4.4 0 0 1-.4.2l-1-.2-.6 1.5 1.7.4.9.3-.5 2 1.2.3.5-2 1 .3-.5 2 1.3.3.5-2c2.1.4 3.7.2 4.4-1.7.5-1.5 0-2.4-1.2-3 .9-.2 1.5-.8 1.7-2zm-2.8 4c-.4 1.6-3 .7-3.8.5l.6-2.4c.9.3 3.6.6 3.2 2zm.3-4c-.3 1.4-2.5.7-3.2.5l.5-2.2c.7.2 3 .5 2.7 1.7z"/></svg>
+            </span>
+            <div>
+              <h4>Bitcoin</h4>
+              <p class="btc-sub">On-chain &middot; Taproot</p>
+            </div>
+          </div>
+          <div class="qr" data-qr="bitcoin:bc1pgc99z8d0le08pjrpl52f5pu8mchkqtk6wg8l5k8gsqtpxc09u3hqkdu5m0" aria-label="Bitcoin address QR code"></div>
+          <div class="btc-addr">
+            <code id="btc-onchain">bc1pgc99z8d0le08pjrpl52f5pu8mchkqtk6wg8l5k8gsqtpxc09u3hqkdu5m0</code>
+            <button class="btn-copy" type="button" data-copy="bc1pgc99z8d0le08pjrpl52f5pu8mchkqtk6wg8l5k8gsqtpxc09u3hqkdu5m0" aria-label="Copy Bitcoin address">Copy</button>
+          </div>
+          <a class="give-cta" href="bitcoin:bc1pgc99z8d0le08pjrpl52f5pu8mchkqtk6wg8l5k8gsqtpxc09u3hqkdu5m0">Open in wallet →</a>
+        </div>
+
+        <div class="btc-card">
+          <div class="btc-head">
+            <span class="btc-icon btc-icon-ln" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg>
+            </span>
+            <div>
+              <h4>Lightning</h4>
+              <p class="btc-sub">Instant &middot; Lightning Address</p>
+            </div>
+          </div>
+          <div class="qr" data-qr="lightning:freetobuild@rizful.com" aria-label="Lightning address QR code"></div>
+          <div class="btc-addr">
+            <code id="btc-ln">freetobuild@rizful.com</code>
+            <button class="btn-copy" type="button" data-copy="freetobuild@rizful.com" aria-label="Copy Lightning address">Copy</button>
+          </div>
+          <a class="give-cta" href="lightning:freetobuild@rizful.com">Open in wallet →</a>
+        </div>
+      </div>
+
+      <p class="btc-note">Scan either QR code with any Bitcoin or Lightning wallet. Addresses are also <a href="https://github.com/FreeToBuild" target="_blank" rel="noopener">published &amp; signed in the repo</a> so you can verify them independently.</p>
 
       <h3>Give directly</h3>
       <p>These rails work globally, have low fees, and don't require donors to sign anything.</p>
@@ -99,9 +142,9 @@
         </div>
         <div class="give-card">
           <span class="tag">Crypto · Permissionless</span>
-          <h3>Bitcoin / Ethereum / Monero</h3>
-          <p>No gatekeepers, no country restrictions, no reversals. Wallet addresses are published in the repo and signed.</p>
-          <a class="give-cta" href="https://github.com/FreeToBuild" target="_blank" rel="noopener">See wallets</a>
+          <h3>Bitcoin &amp; Lightning</h3>
+          <p>On-chain and Lightning are live. Scan the QR codes at the top of this page, or open in any Bitcoin wallet with one tap.</p>
+          <a class="give-cta" href="#bitcoin">Jump to QR codes</a>
         </div>
       </div>
 
@@ -160,6 +203,62 @@
   </div>
 </footer>
 
+<script src="vendor/qrcode-generator.min.js" defer></script>
 <script src="script.js" defer></script>
+<script defer>
+  window.addEventListener('DOMContentLoaded', function () {
+    // QR codes (qrcode-generator: global `qrcode` function, renders SVG)
+    if (typeof qrcode === 'function') {
+      document.querySelectorAll('.qr[data-qr]').forEach(function (el) {
+        var data = el.getAttribute('data-qr');
+        try {
+          var qr = qrcode(0, 'M');
+          qr.addData(data);
+          qr.make();
+          el.innerHTML = qr.createSvgTag({ cellSize: 5, margin: 2, scalable: true });
+          var svg = el.querySelector('svg');
+          if (svg) {
+            svg.removeAttribute('width');
+            svg.removeAttribute('height');
+            svg.setAttribute('style', 'display:block;width:100%;height:auto;');
+            svg.querySelectorAll('path, rect').forEach(function (n) {
+              var fill = n.getAttribute('fill');
+              if (fill === '#000000' || fill === 'black') n.setAttribute('fill', '#0A0A0A');
+              if (fill === '#ffffff' || fill === 'white') n.setAttribute('fill', '#F5F2EA');
+            });
+          }
+        } catch (e) { console.error('QR render failed:', e); }
+      });
+    }
+    // Copy buttons
+    document.querySelectorAll('.btn-copy[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        var done = function () {
+          var original = btn.textContent;
+          btn.textContent = 'Copied ✓';
+          btn.classList.add('is-copied');
+          setTimeout(function () {
+            btn.textContent = original;
+            btn.classList.remove('is-copied');
+          }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done).catch(function () {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta);
+            ta.select(); document.execCommand('copy');
+            ta.remove(); done();
+          });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = text; document.body.appendChild(ta);
+          ta.select(); document.execCommand('copy');
+          ta.remove(); done();
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
